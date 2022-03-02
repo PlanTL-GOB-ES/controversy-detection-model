@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name="bne-controversy"
 #SBATCH -D .
-#SBATCH --output=./slurm_logs/bne-controversy-%j.out
-#SBATCH --error=./slurm_logs/bne-controversy-%j.err
+#SBATCH --output=./slurm_logs/bne-controversy_title_unbalanced-%j.out
+#SBATCH --error=./slurm_logs/bne-controversy_title_unbalanced-%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres gpu:4
@@ -26,14 +26,14 @@ MODEL='/gpfs/projects/bsc88/projects/bne/eval_cte/models/bne-base'
 OUTPUT_DIR='./output'
 LOGGING_DIR='./tb'
 CACHE_DIR='/gpfs/scratch/bsc88/bsc88882/cache_bne-base'
-DIR_NAME='controversy'_${BATCH_SIZE}_${WEIGHT_DECAY}_${LEARN_RATE}_$(date +"%m-%d-%y_%H-%M")
+DIR_NAME='controversy_title_unbalanced'_${BATCH_SIZE}_${WEIGHT_DECAY}_${LEARN_RATE}_$(date +"%m-%d-%y_%H-%M")
 
 export MPLCONFIGDIR=$CACHE_DIR/$DIR_NAME/matplotlib
 export HF_HOME=$CACHE_DIR/$DIR_NAME/huggingface
 rm -rf $MPLCONFIGDIR
 
 python ./run_glue.py --model_name_or_path $MODEL --seed $SEED \
-					  --dataset_script_path ./controversy_dataset.py \
+					  --dataset_script_path ./controversy_title_unbalanced.py \
 					  --task_name cont --do_train --do_eval --do_predict \
 					  --num_train_epochs $NUM_EPOCHS --per_device_train_batch_size $BATCH_SIZE \
 					  --learning_rate $LEARN_RATE --warmup_ratio $WARMUP --weight_decay $WEIGHT_DECAY \

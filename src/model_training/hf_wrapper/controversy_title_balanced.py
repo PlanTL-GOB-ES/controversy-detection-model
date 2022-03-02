@@ -10,7 +10,7 @@ _DESCRIPTION = """
 
 _HOMEPAGE = """None"""
 
-_URL = "./"
+_URL = "./split_balanced"
 _TRAINING_FILE = "train.json"
 _DEV_FILE = "valid.json"
 _TEST_FILE = "test.json"
@@ -75,7 +75,7 @@ class Controversy(datasets.GeneratorBasedBuilder):
             guid = 0
             for line in f:
                 data = json.loads(line)
-                sentence = data['title'] + '--' + data['content']
+                sentence = data['title']
                 label = 'CONTROVERSY' if data['controversy'] else 'NO_CONTROVERSY'
                 yield guid, {
                     "id": str(guid),

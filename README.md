@@ -31,4 +31,4 @@ TBA
 ## Contact 📧
 📋 We are interested in (1) extending our corpora to make larger models (2) train/evaluate the model in other tasks.
 
-For questions regarding this work, contact Asier Gutiérrez-Fandiño
+For questions regarding this work, contact Asier Gutiérrez-Fandiño (asier.gutierrez@bsc.es)

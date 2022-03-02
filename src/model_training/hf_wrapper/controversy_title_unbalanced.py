@@ -32,7 +32,7 @@ class Controversy(datasets.GeneratorBasedBuilder):
 
     BUILDER_CONFIGS = [
         ControversyConfig(
-            name="Controversy",
+            name="Controversy Title Unbalanced",
             version=datasets.Version("1.0.0"),
             description="Controversy dataset"
         ),

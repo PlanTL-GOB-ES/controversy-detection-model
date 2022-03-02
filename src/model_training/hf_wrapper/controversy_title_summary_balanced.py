@@ -10,7 +10,7 @@ _DESCRIPTION = """
 
 _HOMEPAGE = """None"""
 
-_URL = "./split_20k"
+_URL = "./split_balanced"
 _TRAINING_FILE = "train.json"
 _DEV_FILE = "valid.json"
 _TEST_FILE = "test.json"
@@ -32,7 +32,7 @@ class Controversy(datasets.GeneratorBasedBuilder):
 
     BUILDER_CONFIGS = [
         ControversyConfig(
-            name="Controversy",
+            name="Controversy Title Summary Balanced",
             version=datasets.Version("1.0.0"),
             description="Controversy dataset"
         ),

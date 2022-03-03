@@ -10,7 +10,7 @@ _DESCRIPTION = """
 
 _HOMEPAGE = """None"""
 
-_URL = "./split_20k"
+_URL = "../split_20k/"
 _TRAINING_FILE = "train.json"
 _DEV_FILE = "valid.json"
 _TEST_FILE = "test.json"

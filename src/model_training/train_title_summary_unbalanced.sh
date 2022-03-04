@@ -33,7 +33,7 @@ export HF_HOME=$CACHE_DIR/$DIR_NAME/huggingface
 rm -rf $MPLCONFIGDIR
 
 python ./run_glue.py --model_name_or_path $MODEL --seed $SEED \
-					  --dataset_script_path ./controversy_title_summary_unbalanced.py \
+					  --dataset_script_path ./hf_wrapper/controversy_title_summary_unbalanced.py \
 					  --task_name cont --do_train --do_eval --do_predict \
 					  --num_train_epochs $NUM_EPOCHS --per_device_train_batch_size $BATCH_SIZE \
 					  --learning_rate $LEARN_RATE --warmup_ratio $WARMUP --weight_decay $WEIGHT_DECAY \

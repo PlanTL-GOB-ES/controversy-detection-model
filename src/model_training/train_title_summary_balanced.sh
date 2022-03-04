@@ -16,9 +16,9 @@ module load gcc/8.3.0 cuda/10.2 cudnn/7.6.4 nccl/2.4.8 tensorrt/6.0.1 openmpi/4.
 source /gpfs/projects/bsc88/projects/bne/eval_cte/venv/bin/activate
 
 SEED=1
-NUM_EPOCHS=5
+NUM_EPOCHS=10
 BATCH_SIZE=4
-LEARN_RATE=0.00003
+LEARN_RATE=0.00008
 WARMUP=0.06
 WEIGHT_DECAY=0.01
 
@@ -33,7 +33,7 @@ export HF_HOME=$CACHE_DIR/$DIR_NAME/huggingface
 rm -rf $MPLCONFIGDIR
 
 python ./run_glue.py --model_name_or_path $MODEL --seed $SEED \
-					  --dataset_script_path ./controversy_title_summary_balanced.py \
+					  --dataset_script_path ./hf_wrapper/controversy_title_summary_balanced.py \
 					  --task_name cont --do_train --do_eval --do_predict \
 					  --num_train_epochs $NUM_EPOCHS --per_device_train_batch_size $BATCH_SIZE \
 					  --learning_rate $LEARN_RATE --warmup_ratio $WARMUP --weight_decay $WEIGHT_DECAY \

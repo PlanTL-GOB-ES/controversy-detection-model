@@ -28,7 +28,7 @@ if __name__ == '__main__':
     sampled_all_counts = [data_sampled_all[url[0]] for url in top20]
     data_all = Counter([urlparse(url).netloc for url in data_all])
     data_all_counts = [data_all[url[0]] for url in top20]
-    with open('../output/media_coocurrence.csv', 'w') as fout:
+    with open('../output/media_coocurrence.csv', 'w', encoding='utf-8') as fout:
         csv_writer = csv.writer(fout, delimiter=',',
                                 quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
         csv_writer.writerow(['Source', 'Controversy Occurrences', 'Total Occurrences Sampled', 'Total Occurrences'])

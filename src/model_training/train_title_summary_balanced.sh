@@ -16,9 +16,9 @@ module load gcc/8.3.0 cuda/10.2 cudnn/7.6.4 nccl/2.4.8 tensorrt/6.0.1 openmpi/4.
 source /gpfs/projects/bsc88/projects/bne/eval_cte/venv/bin/activate
 
 SEED=1
-NUM_EPOCHS=10
+NUM_EPOCHS=5
 BATCH_SIZE=4
-LEARN_RATE=0.00008
+LEARN_RATE=0.00003
 WARMUP=0.06
 WEIGHT_DECAY=0.01
 

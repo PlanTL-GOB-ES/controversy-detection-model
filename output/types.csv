@@ -1,0 +1,940 @@
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+Source,type
+twitter.com,social network
+www.youtube.com,social network
+www.eldiario.es,general press
+www.publico.es,general press
+www.20minutos.es,general press
+www.elconfidencial.com,general press
+www.elplural.com,general press
+www.huffingtonpost.es,general press
+www.elmundo.es,general press
+www.elespanol.com,general press
+www.elmundotoday.com,satirical
+cadenaser.com,general press
+blogs.publico.es,blog
+elpais.com,general press
+www.europapress.es,general press
+www.lasexta.com,general press
+www.lavanguardia.com,general press
+www.infolibre.es,general press
+www.elsaltodiario.com,general press
+www.marca.com,sports press
+www.abc.es,general press
+www.xataka.com,specialized press
+www.elperiodico.com,general press
+es.gizmodo.com,specialized press
+actualidad.rt.com,general press
+maldita.es,fact-checker
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+www.losreplicantes.com,general press
+kaosenlared.net,specialized press
+www.escolar.net,specialized press
+blogs.elcorreo.com,blog
+electomania.es,specialized press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.elblogsalmon.com,blog
+naukas.com,specialized press
+www.republica.com,general press
+www.idealista.com,specialized press
+culturainquieta.com,specialized press
+www.fogonazos.es,specialized press
+www.tercerainformacion.es,general press
+ctxt.es,general press
+www.bbc.com,general press
+www.eljueves.es,satirical
+www.vozpopuli.com,general press
+jotapov.com,general press
+magnet.xataka.com,specialized press
+www.lainformacion.com,general press
+www.elpais.com,general press
+www.lavozdegalicia.es,general press
+www.facebook.com,social network
+www.rtve.es,general press
+noticias.lainformacion.com,general press
+www.elindependiente.com,general press
+threadreaderapp.com,social network
+spanishrevolution.org,specialized press
+www.elboletin.com,general press
+www.elnacional.cat,general press
+www.libertaddigital.com,general press
+blogs.elconfidencial.com,blog
+spanishrevolution.net,specialized press
+vozpopuli.com,general press
+www.lamarea.com,general press
+www.nuevatribuna.es,general press
+www.niusdiario.es,general press
+www.theguardian.com,general press
+www.naiz.eus,general press
+www.larazon.es,general press
+laboro-spain.blogspot.com,blog
+www.jrmora.com,satirical
+www.eleconomista.es,specialized press
+www.cuartopoder.es,general press
+www.as.com,sports press
+www.formulatv.com,specialized press
+www.elconfidencialdigital.com,general press
+mobile.twitter.com,social network
+youtu.be,social network
+aldescubierto.org,specialized press
+www.cadenaser.com,general press
+www.heraldo.es,general press
+blogs.20minutos.es,blog
+www.telecinco.es,general press
+www.mimesacojea.com,specialized press
+www.cuatro.com,general press
+www.vilaweb.cat,general press
+www.strambotic.com,specialized press
+diario16.com,general press
+es.noticias.yahoo.com,general press
+www.jotdown.es,specialized press
+www.infobae.com,general press
+www.lavozdeasturias.es,general press
+www.elcomercio.es,specialized press
+www.liveleak.com,specialized press
+vertele.eldiario.es,specialized press
+www.laopiniondemurcia.es,general press
+www.playgroundmag.net,general press
+ecodiario.eleconomista.es,specialized press
+www.microsiervos.com,specialized press
+www.genbeta.com,specialized press
+www.adn.es,specialized press
+www.levante-emv.com,general press
+www.dailymail.co.uk,general press
+www.lavanguardia.es,general press
+alt1040.com,specialized press
+www.adslzone.net,specialized press
+www.bbc.co.uk,general press
+www.expansion.com,general press
+politica.elpais.com,general press

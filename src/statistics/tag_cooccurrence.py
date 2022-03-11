@@ -5,16 +5,16 @@ from itertools import chain
 
 if __name__ == '__main__':
     with open('../data/meneame_controversy_sampled.json', 'r') as fin:
-        data_sampled_all = list(map(json.loads, fin.readlines()))
+        data_sampled_all = list(map(json.loads, fin))
 
-    with open('../data/meneame_controversy.json', 'r') as fin:
+    with open('../data/meneame_controversy.json', 'r', encoding='utf-8') as fin:
         tags_all = []
-        for line in fin.readlines():
+        for line in fin:
             try:
                 d = json.loads(line)
                 tags_all.extend(d['tags'])
             except:
-                print('Error')
+                pass
         tags_all = Counter(tags_all)
 
     data = [(d['controversy'], d['tags']) for d in data_sampled_all.copy()]

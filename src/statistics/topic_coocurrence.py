@@ -5,16 +5,16 @@ from collections import Counter
 
 if __name__ == '__main__':
     with open('../data/meneame_controversy_sampled.json', 'r') as fin:
-        data = list(map(json.loads, fin.readlines()))
+        data = list(map(json.loads, fin))
 
-    with open('../data/meneame_controversy.json', 'r') as fin:
+    with open('../data/meneame_controversy.json', 'r', encoding='utf-8') as fin:
         category_all = []
-        for line in fin.readlines():
+        for line in fin:
             try:
                 d = json.loads(line)
                 category_all.append(d['category'])
             except:
-                print('Error')
+                pass
         category_all = Counter(category_all)
 
     data = [(d['controversy'], d['category']) for d in data]

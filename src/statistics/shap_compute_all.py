@@ -15,7 +15,6 @@ def print_stats(data):
 
 def compute_all(explainer, content):
     data_0 = defaultdict(int)
-    data_1 = defaultdict(int)
 
     with open('../data/meneame_controversy_sampled.json', 'r', encoding='utf-8') as fin:
         texts = list()

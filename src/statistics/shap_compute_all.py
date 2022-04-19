@@ -18,32 +18,27 @@ def compute_all(explainer, content):
     data_1 = defaultdict(int)
 
     with open('../data/meneame_controversy_sampled.json', 'r', encoding='utf-8') as fin:
+        texts = list()
         for item in tqdm(fin):
             item = json.loads(item)
             if content:
                 text = item['title'] + '--' + item['content']
             else:
                 text = item['title']
-            shap_values = explainer([text])
-            words = shap_values.data[0]
-            label_0 = shap_values.values[0][:, 0]
-            label_1 = shap_values.values[0][:, 1]
+            texts.append(text)
+    shap_values = explainer(texts[0:10])
+    for words, value in zip(shap_values.data, shap_values.values):
+        #words = shap_values.data[0]
+        label_0 = value[:, 0]
 
-            for word, value in zip(words, label_0):
-                data_0[word] = data_0[word] + value
-            for word, value in zip(words, label_1):
-                data_1[word] = data_1[word] + value
+        for word, value in zip(words, label_0):
+            data_0[word] = data_0[word] + value
 
-    with open(f'../output/data_0_{"content" if content else "no_content"}.json', 'w', encoding='utf-8') as fout:
+    with open(f'../output/label_0_{"content" if content else "no_content"}.json', 'w', encoding='utf-8') as fout:
         json.dump(data_0, fout)
 
-    with open(f'../output/data_1_{"content" if content else "no_content"}.json', 'w', encoding='utf-8') as fout:
-        json.dump(data_1, fout)
-
-    print("Data 0")
+    print("Label 0")
     print_stats(data_0)
-    print("Data 1")
-    print_stats(data_1)
 
 
 INPUT_PATH = '../models/title'

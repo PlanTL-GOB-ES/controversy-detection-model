@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
         pos = pos_pipeline(texts)
         pos = [[defaultdict(int, element) for element in _pos] for _pos in pos]
-        for _pos, _words, _values in zip(pos, words, values):
+        for _pos, _words, _values, text in zip(pos, words, values, texts):
             start = 0
             for word, value in zip(_words, _values):
                 if word:
@@ -37,7 +37,7 @@ if __name__ == '__main__':
                     for entity in _pos:
                         e_start, e_end = entity['start'], entity['end']
                         if start >= e_start and start < e_end and end > e_start and end <= e_end:
-                            print(word, entity['word'])
+                            entity['word'] = text[e_start:e_end]
                             entity['value'] = entity['value'] + value
                     start = end + 1
 

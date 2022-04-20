@@ -23,10 +23,10 @@ def compute_all(explainer, content):
             else:
                 text = item['title']
             texts.append(text)
-    shap_values = explainer(texts[0:10])
+    shap_values = explainer(texts)
     # Save computations
     with open(f'../output/shap_results_{"content" if content else "no_content"}.json', 'w', encoding='utf-8') as fout:
-        for text, shap_result in zip(texts[0:10], shap_values):
+        for text, shap_result in zip(texts, shap_values):
             out = {
                 'text': text,
                 'shap_values': shap_result.values[:, 0].tolist(),

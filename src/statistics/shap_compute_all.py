@@ -37,6 +37,7 @@ def compute_all(explainer, content):
             fout.write(json.dumps(out))
             fout.write('\n')
 
+    """
     # Compute by word
     for words, value in zip(shap_values.data, shap_values.values):
         # words = shap_values.data[0]
@@ -47,9 +48,10 @@ def compute_all(explainer, content):
 
     with open(f'../output/shap_words_{"content" if content else "no_content"}.json', 'w', encoding='utf-8') as fout:
         json.dump(data_0, fout)
-
+    
     print("Label 0")
     print_stats(data_0)
+    """
 
 
 INPUT_PATH = '../models/title'

@@ -40,11 +40,29 @@ if __name__ == '__main__':
                             print(word, entity['word'])
                             entity['value'] = entity['value'] + value
                     start = end + 1
+
+        # PoS tags
         pos_tags_values = defaultdict(int)
         for _pos in pos:
             for __pos in _pos:
                 tag = __pos['entity_group']
                 pos_tags_values[tag] = + __pos['value']
         pos_tags_values = sorted(pos_tags_values.items(), key=lambda x: x[1])
+        print('-' * 40)
         for ptv in pos_tags_values:
             print(ptv[0] + '\t' + str(ptv[1]))
+
+        # By word
+        word_values = defaultdict(int)
+        for _pos in pos:
+            for __pos in _pos:
+                word = __pos['word']
+                word_values[word] = + __pos['value']
+        word_values = sorted(word_values.items(), key=lambda x: x[1])
+        print('-'*40)
+        for w, v in word_values[:10]:
+            print(w, v)
+        print('-' * 40)
+        for w, v in word_values[:-10:-1]:
+            print(w, v)
+        print('-'*40)

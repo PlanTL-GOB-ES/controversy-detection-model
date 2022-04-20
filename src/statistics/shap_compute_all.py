@@ -14,8 +14,6 @@ def print_stats(data):
 
 
 def compute_all(explainer, content):
-    data_0 = defaultdict(int)
-
     with open('../data/meneame_controversy_sampled.json', 'r', encoding='utf-8') as fin:
         texts = list()
         for item in tqdm(fin):
@@ -36,22 +34,6 @@ def compute_all(explainer, content):
             }
             fout.write(json.dumps(out))
             fout.write('\n')
-
-    """
-    # Compute by word
-    for words, value in zip(shap_values.data, shap_values.values):
-        # words = shap_values.data[0]
-        label_0 = value[:, 0]
-
-        for word, value in zip(words, label_0):
-            data_0[word] = data_0[word] + value
-
-    with open(f'../output/shap_words_{"content" if content else "no_content"}.json', 'w', encoding='utf-8') as fout:
-        json.dump(data_0, fout)
-    
-    print("Label 0")
-    print_stats(data_0)
-    """
 
 
 INPUT_PATH = '../models/title'

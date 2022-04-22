@@ -7,8 +7,8 @@ from tqdm import tqdm
 
 
 def tokenize_remove_stop_words(text, stop_words):
-    tokenized = nltk.tokenize.word_tokenize(text, language='spanish')
-    return [token for token in tokenized if token not in stop_words]
+    tokenized = [tok.lower() for tok in nltk.tokenize.word_tokenize(text, language='spanish')]
+    return [token for token in tokenized if token not in stop_words and token.isalpha()]
 
 
 def add_to_dict(words, dictionary):
@@ -25,7 +25,19 @@ def save(d, name):
         json.dump(d, fout)
 
 
-if __name__ == '__main__':
+def stats():
+    word_positive_counts_title = json.load(open('../output/positive_title.json'))
+    word_negative_counts_title = json.load(open('../output/negative_title.json'))
+    word_positive_counts_summary = json.load(open('../output/positive_summary.json'))
+    word_negative_counts_summary = json.load(open('../output/positive_summary.json'))
+    print_top(word_positive_counts_title)
+    print_top(word_negative_counts_title)
+    print_top(word_positive_counts_summary)
+    print_top(word_negative_counts_summary)
+
+
+
+def compute_all():
     stop_words = list(get_stop_words('es'))  # About 900 stopwords
     nltk_words = list(stopwords.words('spanish'))  # About 150 stopwords
     stop_words.extend(nltk_words)
@@ -45,12 +57,14 @@ if __name__ == '__main__':
             except:
                 print("Error")
 
-    print_top(word_positive_counts_title)
-    print_top(word_negative_counts_title)
-    print_top(word_positive_counts_summary)
-    print_top(word_negative_counts_summary)
-
     save(word_positive_counts_title, 'positive_title')
     save(word_negative_counts_title, 'negative_title')
     save(word_positive_counts_summary, 'positive_summary')
     save(word_negative_counts_summary, 'negative_summary')
+
+    stats()
+
+
+if __name__ == '__main__':
+    # compute_all()
+    stats()

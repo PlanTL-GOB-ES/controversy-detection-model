@@ -47,7 +47,7 @@ if __name__ == '__main__':
     train, valid, test = split(no_controversy[:num_controversy])
     train_balanced = train_controversy + train
     valid_balanced = valid_controversy + valid
-    test_balanced = test_controversy + test
+    test_balanced = test_unbalanced  # test_controversy + test
 
     # write all
     write('split_20k', 'train', train_unbalanced)

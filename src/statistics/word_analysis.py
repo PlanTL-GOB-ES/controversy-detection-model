@@ -25,16 +25,24 @@ def save(d, name):
         json.dump(d, fout)
 
 
+def relative(a, b):
+    ret = {k: v/(v+b[k])for k, v in a.items() if a[k] > 1 and b[k] > 1}
+    return ret
+
+
 def stats():
-    word_positive_counts_title = json.load(open('../output/positive_title.json'))
-    word_negative_counts_title = json.load(open('../output/negative_title.json'))
-    word_positive_counts_summary = json.load(open('../output/positive_summary.json'))
-    word_negative_counts_summary = json.load(open('../output/positive_summary.json'))
+    word_positive_counts_title = defaultdict(int, json.load(open('../output/positive_title.json')))
+    word_negative_counts_title = defaultdict(int, json.load(open('../output/negative_title.json')))
+    word_positive_counts_summary = defaultdict(int, json.load(open('../output/positive_summary.json')))
+    word_negative_counts_summary = defaultdict(int, json.load(open('../output/negative_summary.json')))
     print_top(word_positive_counts_title)
     print_top(word_negative_counts_title)
     print_top(word_positive_counts_summary)
     print_top(word_negative_counts_summary)
-
+    print_top(relative(word_positive_counts_title, word_negative_counts_title))
+    print_top(relative(word_negative_counts_title, word_positive_counts_title))
+    print_top(relative(word_positive_counts_summary, word_negative_counts_summary))
+    print_top(relative(word_negative_counts_summary, word_positive_counts_summary))
 
 
 def compute_all():

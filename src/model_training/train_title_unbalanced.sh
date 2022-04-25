@@ -16,9 +16,9 @@ module load gcc/8.3.0 cuda/10.2 cudnn/7.6.4 nccl/2.4.8 tensorrt/6.0.1 openmpi/4.
 source /gpfs/projects/bsc88/projects/bne/eval_cte/venv/bin/activate
 
 SEED=1
-NUM_EPOCHS=5
+NUM_EPOCHS=20
 BATCH_SIZE=4
-LEARN_RATE=0.00003
+LEARN_RATE=0.000008
 WARMUP=0.06
 WEIGHT_DECAY=0.01
 
@@ -40,4 +40,4 @@ python ./run_glue.py --model_name_or_path $MODEL --seed $SEED \
 					  --output_dir $OUTPUT_DIR/$DIR_NAME --overwrite_output_dir \
 					  --logging_dir $LOGGING_DIR/$DIR_NAME --logging_strategy epoch \
 					  --cache_dir $CACHE_DIR/$DIR_NAME --overwrite_cache \
-					  --metric_for_best_model accuracy --evaluation_strategy epoch --load_best_model_at_end
+					  --metric_for_best_model f1 --evaluation_strategy epoch --load_best_model_at_end

@@ -1,6 +1,20 @@
 import json
+from itertools import chain
 from collections import defaultdict
 from transformers import AutoModelForTokenClassification, AutoTokenizer, AutoConfig, pipeline
+import numpy as np
+
+
+class NumpyEncoder(json.JSONEncoder):
+    """ Special json encoder for numpy types """
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        elif isinstance(obj, np.floating):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return json.JSONEncoder.default(self, obj)
 
 
 def load_pos_pipeline(dir):
@@ -11,7 +25,7 @@ def load_pos_pipeline(dir):
 
 
 POS_MODEL = 'PlanTL-GOB-ES/roberta-base-bne-capitel-pos'
-INPUT_SHAP_RESULTS = '../output/shap_results_no_content.json'
+INPUT_SHAP_RESULTS = '../output/all_content.json'  # '../output/shap_results_no_content.json'
 if __name__ == '__main__':
     pos_pipeline = load_pos_pipeline(POS_MODEL)
     with open(INPUT_SHAP_RESULTS, 'r', encoding='utf-8') as fin:
@@ -52,6 +66,10 @@ if __name__ == '__main__':
         for ptv in pos_tags_values:
             print(ptv[0] + '\t' + str(ptv[1]))
 
+        with open('../output/pos_all.json', 'w', encoding='utf-8') as fout:
+            dumped = json.dumps(list(chain.from_iterable(pos)), cls=NumpyEncoder)
+            json.dump(dumped, fout)
+
         # By word
         word_values = defaultdict(int)
         for _pos in pos:
@@ -66,3 +84,5 @@ if __name__ == '__main__':
         for w, v in word_values[:-10:-1]:
             print(w, v)
         print('-'*40)
+        with open('../output/pos_content.json', 'w', encoding='utf-8') as fout:
+            json.dump(word_values, fout)

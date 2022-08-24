@@ -11,8 +11,8 @@ if __name__ == '__main__':
 
     for unique_entity in unique_entities:
         print("\hline")
-        pos_selection = df_sum[unique_entity].nlargest(10)
-        neg_selection = df_sum[unique_entity].nsmallest(10)
+        pos_selection = df_sum[unique_entity].nlargest(25)
+        neg_selection = df_sum[unique_entity].nsmallest(25)
         pos = list(zip(pos_selection.index, pos_selection))
         neg = list(zip(neg_selection.index, neg_selection))
         for i, w in enumerate(pos):

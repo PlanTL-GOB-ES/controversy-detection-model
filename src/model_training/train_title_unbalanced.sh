@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name="bne-controversy"
 #SBATCH -D .
-#SBATCH --output=./slurm_logs/bne-controversy_title_unbalanced-%j.out
-#SBATCH --error=./slurm_logs/bne-controversy_title_unbalanced-%j.err
+#SBATCH --output=./slurm_logs/$2-controversy_title_unbalanced-%j.out
+#SBATCH --error=./slurm_logs/$2-controversy_title_unbalanced-%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres gpu:4
@@ -22,11 +22,11 @@ LEARN_RATE=0.000008
 WARMUP=0.06
 WEIGHT_DECAY=0.01
 
-MODEL='/gpfs/projects/bsc88/projects/bne/eval_cte/models/bne-base'
+MODEL=$1
 OUTPUT_DIR='./output'
 LOGGING_DIR='./tb'
-CACHE_DIR='/gpfs/scratch/bsc88/bsc88882/cache_bne-base'
-DIR_NAME='controversy_title_unbalanced'_${BATCH_SIZE}_${WEIGHT_DECAY}_${LEARN_RATE}_$(date +"%m-%d-%y_%H-%M")
+CACHE_DIR='/gpfs/projects/bsc88/projects/meneame_controversy/cache'
+DIR_NAME=$2_'controversy_title_unbalanced'_${BATCH_SIZE}_${WEIGHT_DECAY}_${LEARN_RATE}_$(date +"%m-%d-%y_%H-%M")
 
 export MPLCONFIGDIR=$CACHE_DIR/$DIR_NAME/matplotlib
 export HF_HOME=$CACHE_DIR/$DIR_NAME/huggingface

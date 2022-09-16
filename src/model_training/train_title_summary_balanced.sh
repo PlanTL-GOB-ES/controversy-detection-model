@@ -9,11 +9,7 @@
 #SBATCH --cpus-per-task=160
 #SBATCH --time=0-6:00:00
 
-module load gcc/8.3.0 cuda/10.2 cudnn/7.6.4 nccl/2.4.8 tensorrt/6.0.1 openmpi/4.0.1 \
-			atlas/3.10.3 scalapack/2.0.2 fftw/3.3.8 szip/2.1.1 ffmpeg/4.2.1 opencv/4.1.1 \
-			python/3.7.4_ML arrow/3.0.0 text-mining/2.0.0 torch/1.9.0a0 torchvision/0.11.0
-
-source /gpfs/projects/bsc88/projects/bne/eval_cte/venv/bin/activate
+source ../clara/use_env.sh
 
 SEED=1
 NUM_EPOCHS=20
@@ -40,4 +36,7 @@ python ./run_glue.py --model_name_or_path $MODEL --seed $SEED \
 					  --output_dir $OUTPUT_DIR/$DIR_NAME --overwrite_output_dir \
 					  --logging_dir $LOGGING_DIR/$DIR_NAME --logging_strategy epoch \
 					  --cache_dir $CACHE_DIR/$DIR_NAME --overwrite_cache \
-					  --metric_for_best_model f1 --evaluation_strategy epoch --load_best_model_at_end
+					  --save_strategy steps --save_steps 100 \
+					  --evaluation_strategy steps --eval_steps 100 \
+					  --logging_strategy steps --logging_steps 100 \
+					  --metric_for_best_model f1 --load_best_model_at_end

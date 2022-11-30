@@ -10,9 +10,10 @@ _DESCRIPTION = """
 
 _HOMEPAGE = """None"""
 
-_URL = "../split_20k/"
-_TRAINING_FILE = "train.json"
-_DEV_FILE = "valid.json"
+_URL = "../no_ents/"
+_TRAINING_FILE = "train.jsonl"
+_DEV_FILE = "valid.jsonl"
+_URL2 = "../shuf_split_20k/"
 _TEST_FILE = "test.json"
 
 
@@ -59,7 +60,7 @@ class Controversy(datasets.GeneratorBasedBuilder):
         urls_to_download = {
             "train": f"{_URL}{_TRAINING_FILE}",
             "dev": f"{_URL}{_DEV_FILE}",
-            "test": f"{_URL}{_TEST_FILE}",
+            "test": f"{_URL2}{_TEST_FILE}",
         }
         downloaded_files = dl_manager.download_and_extract(urls_to_download)
 

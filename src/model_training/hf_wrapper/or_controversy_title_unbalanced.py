@@ -10,7 +10,7 @@ _DESCRIPTION = """
 
 _HOMEPAGE = """None"""
 
-_URL = "../shuf_split_balanced/"
+_URL = "../shuf_split_20k/"
 _TRAINING_FILE = "train.json"
 _DEV_FILE = "valid.json"
 _TEST_FILE = "test.json"
@@ -32,7 +32,7 @@ class Controversy(datasets.GeneratorBasedBuilder):
 
     BUILDER_CONFIGS = [
         ControversyConfig(
-            name="Controversy Title Summary Balanced",
+            name="Controversy Title Unbalanced",
             version=datasets.Version("1.0.0"),
             description="Controversy dataset"
         ),
@@ -75,7 +75,7 @@ class Controversy(datasets.GeneratorBasedBuilder):
             guid = 0
             for line in f:
                 data = json.loads(line)
-                sentence = data['title'] + '--' + data['content']
+                sentence = data['title']
                 label = 'CONTROVERSY' if data['controversy'] else 'NO_CONTROVERSY'
                 yield guid, {
                     "id": str(guid),

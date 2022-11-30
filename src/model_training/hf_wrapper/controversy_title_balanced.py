@@ -10,7 +10,7 @@ _DESCRIPTION = """
 
 _HOMEPAGE = """None"""
 
-_URL = "../split_balanced/"
+_URL = "../shuf_split_balanced/"
 _TRAINING_FILE = "train.json"
 _DEV_FILE = "valid.json"
 _TEST_FILE = "test.json"

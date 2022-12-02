@@ -9,7 +9,7 @@ def transform_ner(text, model):
     entities = model(text)
     if entities:
         for entity in entities:
-            if entity['entity'] in ['LOC', 'PERS', 'ORG']:
+            if entity['entity'] in ['LOC', 'PER', 'ORG']:
                 text = re.sub(re.escape(entity['word']), ' '+entity['entity'], text)
     return text
 

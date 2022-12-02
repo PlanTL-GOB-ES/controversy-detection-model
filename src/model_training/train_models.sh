@@ -12,9 +12,9 @@
 source ../clara/use_env.sh
 
 SEED=1
-NUM_EPOCHS=5
+NUM_EPOCHS=$4
 BATCH_SIZE=4
-LEARN_RATE=0.00005
+LEARN_RATE=$3
 WARMUP=0.06
 WEIGHT_DECAY=0.01
 
@@ -47,7 +47,7 @@ python $SCRIPT --model_name_or_path '/gpfs/projects/bsc88/projects/bne/eval_cte/
 					  --output_dir $OUTPUT_DIR/$DIR_NAME --overwrite_output_dir \
 					  --logging_dir $LOGGING_DIR/$DIR_NAME --logging_strategy epoch \
 					  --cache_dir $CACHE_DIR/$DIR_NAME --overwrite_cache \
-					  --save_strategy steps --save_steps 100 \
-					  --evaluation_strategy steps --eval_steps 100 \
-					  --logging_strategy steps --logging_steps 100 \
+					  --save_strategy steps --save_steps $5 \
+					  --evaluation_strategy steps --eval_steps $5 \
+					  --logging_strategy steps --logging_steps $5 \
 					  --metric_for_best_model f1 --load_best_model_at_end

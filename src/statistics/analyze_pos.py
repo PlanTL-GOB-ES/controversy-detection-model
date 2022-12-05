@@ -1,13 +1,19 @@
 import json
 import pandas as pd
+from collections import defaultdict
+
 
 if __name__ == '__main__':
-    with open('../output/pos_all.json', 'r', encoding='utf-8') as fin:
+    with open('output/all_data/pos_all.json', 'r', encoding='utf-8') as fin:
         data = json.loads(json.loads(fin.readlines()[0]))
     df = pd.DataFrame(data)
-    unique_entities = df['entity_group'].unique()
-    df_group = df.groupby(by=['entity_group', 'word'])
+    unique_entities = df['entity'].unique()
+    df_group = df.groupby(by=['entity', 'word'])
     df_sum = df_group['value'].sum()
+    df_group_pos = df.groupby(by=['entity'])
+    df_sum_pos = df_group_pos['value'].sum() # or mean()?
+
+    print(df_sum_pos)
 
     for unique_entity in unique_entities:
         print("\hline")

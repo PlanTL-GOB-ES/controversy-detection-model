@@ -22,10 +22,10 @@ def load_pos_pipeline(dir):
     model = AutoModelForTokenClassification.from_pretrained(dir)
     tokenizer = AutoTokenizer.from_pretrained(dir)
     config = AutoConfig.from_pretrained(dir)
-    return pipeline('token-classification', model=model, tokenizer=tokenizer, config=config, device=0)
+    return pipeline('token-classification', model=model, tokenizer=tokenizer, config=config)#, device=0)
 
 
-POS_MODEL = '../../huggingface/models/roberta-base-bne-capitel-pos'
+POS_MODEL = 'PlanTL-GOB-ES/roberta-base-bne-capitel-pos'
 #INPUT_SHAP_RESULTS = '../../projects/meneame_controversy/no_ents/shap_values.jsonl'  # '../output/shap_results_no_content.json'
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -65,13 +65,14 @@ if __name__ == '__main__':
         # PoS tags
         pos_tags_values = defaultdict(int)
         for _pos in pos:
-            for __pos in _pos:
-                tag = __pos['entity_group']
-                pos_tags_values[tag] = + __pos['value']
+            for i,__pos in enumerate(_pos):
+                tag = __pos['entity']
+                pos_tags_values[tag] += __pos['value']
         pos_tags_values = sorted(pos_tags_values.items(), key=lambda x: x[1])
-        #print('-' * 40)
-        #for ptv in pos_tags_values:
-        #    print(ptv[0] + '\t' + str(ptv[1]))
+        # print('-' * 40)
+        # for ptv in pos_tags_values:
+        #    print(str(ptv[0]) + '\t' + str(ptv[1]))
+
 
         with open(args.path+'/pos_all.json', 'w', encoding='utf-8') as fout:
             dumped = json.dumps(list(chain.from_iterable(pos)), cls=NumpyEncoder)

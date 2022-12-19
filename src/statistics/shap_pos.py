@@ -22,7 +22,7 @@ def load_pos_pipeline(dir):
     model = AutoModelForTokenClassification.from_pretrained(dir)
     tokenizer = AutoTokenizer.from_pretrained(dir)
     config = AutoConfig.from_pretrained(dir)
-    return pipeline('token-classification', model=model, tokenizer=tokenizer, config=config)#, device=0)
+    return pipeline('token-classification', model=model, tokenizer=tokenizer, config=config, aggregation_strategy='max')#, device=0)
 
 
 POS_MODEL = 'PlanTL-GOB-ES/roberta-base-bne-capitel-pos'
@@ -31,23 +31,22 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # parser.add_argument('--idx', type=int)
     #parser.add_argument('--model', type=str)
-    parser.add_argument('--input', type=str)
-    parser.add_argument('--path', type=str)
+    parser.add_argument('--input_path', type=str)
+    parser.add_argument('--output_path', type=str)
     args = parser.parse_args()
     pos_pipeline = load_pos_pipeline(POS_MODEL)
-    with open(args.path+args.input, 'r', encoding='utf-8') as fin:
+    with open(args.input_path, 'r', encoding='utf-8') as fin:
+        data = [json.loads(line) for line in fin]
         texts = list()
         values = list()
         words = list()
-        for line in fin:
-            line = json.loads(line)
+        for line in data:
             text = line['text']
             shap_values = line['shap_values']
             shap_text = line['shap_text']
             texts.append(text)
             values.append(shap_values)
             words.append(shap_text)
-
         pos = pos_pipeline(texts)
         pos = [[defaultdict(int, element) for element in _pos] for _pos in pos]
         for _pos, _words, _values, text in zip(pos, words, values, texts):
@@ -74,7 +73,7 @@ if __name__ == '__main__':
         #    print(str(ptv[0]) + '\t' + str(ptv[1]))
 
 
-        with open(args.path+'/pos_all.json', 'w', encoding='utf-8') as fout:
+        with open(args.output_path+'pos_all.json', 'w', encoding='utf-8') as fout:
             dumped = json.dumps(list(chain.from_iterable(pos)), cls=NumpyEncoder)
             json.dump(dumped, fout)
 
@@ -92,5 +91,5 @@ if __name__ == '__main__':
         # for w, v in word_values[:-10:-1]:
         #     print(w, v)
         # print('-'*40)
-        with open(args.path+'/pos_content.json', 'w', encoding='utf-8') as fout:
+        with open(args.output_path+'pos_content.json', 'w', encoding='utf-8') as fout:
             json.dump(word_values, fout)

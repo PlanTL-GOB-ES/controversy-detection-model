@@ -76,7 +76,7 @@ class Controversy(datasets.GeneratorBasedBuilder):
             guid = 0
             for line in f:
                 data = json.loads(line)
-                sentence = data['title'] + '--' + data['content']
+                sentence = data['title'] + ' -- ' + data['content']
                 label = 'CONTROVERSY' if data['controversy'] else 'NO_CONTROVERSY'
                 yield guid, {
                     "id": str(guid),

@@ -5,10 +5,10 @@ from sklearn.metrics import confusion_matrix, classification_report, f1_score
 if __name__ == '__main__':
     # COMPARE BALANCED VS UNBALANCED, BECAUSE TITLE VS TITLE+SUMMARY TÉ MASSA POCA DIFERÈNCIA
     matrix  =[]
-    with open('models/t_s_bal/test_results_cont.txt', 'r') as file1:
+    with open('models/no_ents_sum/no_ents.txt', 'r') as file1:
         bal = file1.readlines()
         bal_results = [t.split('\t')[1].replace('\n', '') for t in bal][1:]
-    with open('models/t_s_unbal/test_results_cont.txt', 'r') as file2:
+    with open('models/no_ents_sum/ents.txt', 'r') as file2:
         unbal = file2.readlines()
         unbal_results = [t.split('\t')[1].replace('\n', '') for t in unbal][1:]
     with open('data/split_20k/test.json', 'r') as fin:

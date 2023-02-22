@@ -46,8 +46,6 @@ if __name__ == '__main__':
                         propn_values[1].append(line['value'])
             print('PROPN-token', sum(propn_values[0])/len(propn_values[0]), sum(propn_values[1])/len(propn_values[1]), len(propn_values[0])+len(propn_values[1]))
 
-
-        continue
         if words:
             for unique_entity in ['ADV']: # 'PROPN', 'VERB', 'ADV', 'NOUN', 'ADJ'
                 print("\hline")

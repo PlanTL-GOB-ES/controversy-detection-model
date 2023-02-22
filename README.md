@@ -1,9 +1,14 @@
 # Spanish Controversy Detection Language Model
 
-TBA
+This repository contains the code of the paper "Anticipating the Debate: Predicting Controversy in News with Transformer-based NLP". 
+
+Controversy is a social phenomenon that emerges when a topic generates large disagreement among people. In the public sphere, controversy is very often related to news. Whereas previous approaches have addressed controversy detection, in this work, we propose to predict controversy based on the title and content of a news post. First, we collect and prepare a dataset from a Spanish news aggregator that labels the news' controversy in a community-based manner. Next, we experiment with the capabilities of language models to learn these labels by fine-tuning models that take both title and content, and the title alone. To cope with data unbalance, we undergo different experiments by sampling the dataset. The best model obtains an 84.72\% micro-F1, trained with an unbalanced dataset and given the title and content as input. The preliminary results show that this task can be learned by relying on linguistic and social features.
 
 ## Model 🤖
-- TBA
+
+We use a dataset of news from the Menéame platform, tagged with controversy labels in a community-based manner. The best model was trained with a batch size of 4 and a learning rate of 1e-5 for 5 epochs. We then selected the best checkpoint using the downstream task metric in the corresponding development set and then evaluated it on the test set.
+
+Hugging Face: https://huggingface.co/PlanTL-GOB-ES/Controversy-Prediction
 
 ## Dataset 🗂️
 
@@ -33,34 +38,31 @@ TBA
   <tr>
     <td class="tg-0pky" rowspan="3">Unbalanced Subset from All</td>
     <td class="tg-0pky">Train</td>
-    <td class="tg-dvpl">18,000</td>
+    <td class="tg-dvpl">18,270</td>
   </tr>
   <tr>
     <td class="tg-0pky">Development</td>
-    <td class="tg-dvpl">1,000</td>
+    <td class="tg-dvpl">1,058</td>
   </tr>
   <tr>
     <td class="tg-0pky">Test</td>
-    <td class="tg-dvpl">1,386</td>
+    <td class="tg-dvpl">1,058</td>
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="3">Balanced Subset from All</td>
     <td class="tg-0pky">Train</td>
-    <td class="tg-dvpl">9,990</td>
+    <td class="tg-dvpl">9,900</td>
   </tr>
   <tr>
     <td class="tg-0pky">Development</td>
-    <td class="tg-dvpl">589</td>
+    <td class="tg-dvpl">634</td>
   </tr>
   <tr>
     <td class="tg-0pky">Test</td>
-    <td class="tg-dvpl">589</td>
+    <td class="tg-dvpl">1,058</td>
   </tr>
 </tbody>
 </table>
-
-- Zenodo: TBA
-- HuggingFace: TBA
 
 ## Evaluation ✅
 <table style="undefined;table-layout: fixed; width: 437px">
@@ -84,42 +86,54 @@ TBA
   <tr>
     <td rowspan="2">Balanced</td>
     <td>Title</td>
-    <td>0.6536</td>
-    <td>0.6689</td>
-    <td>817</td>
+    <td>0.7026</td>
+    <td>0.6295</td>
+    <td>1653</td> 
   </tr>
   <tr>
     <td>Title + Summary</td>
-    <td>0.6666</td>
-    <td>0.6740</td>
-    <td>841</td>
+    <td>0.8093</td>
+    <td>0.7353</td>
+    <td>1267</td>
   </tr>
   <tr>
     <td rowspan="2">Unbalanced</td>
     <td>Title</td>
-    <td>0.8331</td>
-    <td>0.7532</td>
-    <td>1472</td>
+    <td>0.8197</td>
+    <td>0.7268</td>
+    <td>2631</td>
   </tr>
   <tr>
     <td>Title + Summary</td>
-    <td>0.8584</td>
-    <td>0.7712</td>
-    <td>1425</td>
+    <td>0.8472</td>
+    <td>0.7662</td>
+    <td>2615</td>
   </tr>
 </tbody>
 </table>
 
-## Usage example ⚗️
+## Usage example of the model ⚗️
+
 ```
-TBA
+from transformers import pipeline
+from pprint import pprint
+
+nlp = pipeline("text-classification", model="PlanTL-GOB-ES/Controversy-Prediction")
+example = "Esposas, hijos, nueras y familiares de altos cargos del PP y de la cúpula universitaria llenan la URJC -- Pedro González-Trevijano, rector de la universidad desde 2002 a 2013, ahora magistrado del Tribunal Constitucional, y su sucesor en el cargo, Fernando Suárez han tejido una red que ha dado cobijo laboral a más de un centenar de familiares de vicerrectores, gerentes o catedráticos en los cuatro campus con los que cuenta la universidad localizados en Alcorcón, Móstoles, Fuenlabrada y Vicálvaro."
+
+output = nlp(example)
+pprint(output)
 ```
 
-## Other Spanish Language Models 👩‍👧‍👦
-We are developing general domain and domain-specific language models:
-- 💃🏻  [General domain](https://github.com/PlanTL-GOB-ES/lm-spanish)
-- ⚖️ [Legal Language Model](https://github.com/PlanTL-GOB-ES/lm-legal-es)
-- ⚕️ [Biomedical and Clinical Language Models](https://github.com/PlanTL-GOB-ES/lm-biomedical-clinical-es) 
+## Code of our experiments
+
+Dataset transformation: https://github.com/PlanTL-GOB-ES/controversy-detection-model/tree/main/src/dataset
+
+Model training: https://github.com/PlanTL-GOB-ES/controversy-detection-model/tree/main/src/model_training
+
+Statistics and results analysis: https://github.com/PlanTL-GOB-ES/controversy-detection-model/tree/main/src/statistics
+
+
 
 ## Cite 📣
 ```
@@ -127,9 +141,7 @@ TBA
 ```
 
 ## Contact 📧
-📋 We are interested in (1) extending our corpora to make larger models (2) train/evaluate the model in other tasks.
-
-For questions regarding this work, contact <plantl-gob-es@bsc.es>
+For questions regarding this work, contact <bcalvo.bsc@gmail.com>
 
 
 ## Disclaimer

@@ -9,19 +9,8 @@
 #SBATCH --cpus-per-task=128
 #SBATCH --time=0-6:00:00
 
-source ../clara/use_env.sh
 
-#SEED=1
-#NUM_EPOCHS=5
-#BATCH_SIZE=4
-#LEARN_RATE=0.00005
-#WARMUP=0.06
-#WEIGHT_DECAY=0.01
-
-#MODEL=$1
-#ut'
-#LOGGING_DIR='./tb'
-CACHE_DIR='/gpfs/projects/bsc88/projects/meneame_controversy/cache'
+CACHE_DIR='cache'
 DIR_NAME=./output/$1
 CHECKPOINT=$2
 MODEL=$DIR_NAME/$CHECKPOINT

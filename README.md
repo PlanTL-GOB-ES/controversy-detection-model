@@ -137,7 +137,19 @@ Statistics and results analysis: https://github.com/PlanTL-GOB-ES/controversy-de
 
 ## Cite 📣
 ```
-TBA
+@article{PLN6484,
+	author = {Blanca Calvo Figueras y Asier Gutiérrez-Fandiño y Marta Villegas},
+	title = {Anticipating the Debate: Predicting Controversy in News with Transformer-based NLP},
+	journal = {Procesamiento del Lenguaje Natural},
+	volume = {70},
+	number = {0},
+	year = {2023},
+	keywords = {},
+	abstract = {Controversy is a social phenomenon that emerges when a topic generates large disagreement among people. In the public sphere, controversy is very often related to news. Whereas previous approaches have addressed controversy detection, in this work, we propose to predict controversy based on the title and content of a news post. First, we collect and prepare a dataset from a Spanish news aggregator that labels the news’ controversy in a community-based manner. Next, we experiment with the capabilities of language models to learn these labels by fine-tuning models that take both title and content, and the title alone. To cope with data unbalance, we undergo different experiments by sampling the dataset. The best model obtains an 84.72 micro-F1, trained with an unbalanced dataset and given the title and content as input. The preliminary results show that this task can be learned by relying on linguistic and social features.},
+	issn = {1989-7553},
+	url = {http://journal.sepln.org/sepln/ojs/ojs/index.php/pln/article/view/6484},
+	pages = {123--133}
+}
 ```
 
 ## Contact 📧
